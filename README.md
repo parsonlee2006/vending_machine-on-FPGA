@@ -1,125 +1,92 @@
-# `sphinx-book-theme`-based Template for Scientific Text
+# vending_machine
 
-You can write your content in Markdown or reStructuredtext. I recommend Markdown.
 
-# Getting started
 
-## Install `sphinx-book-theme`
+## Getting started
 
-Create a Python virtual environment to not influence your standard Python development environment:
+To make it easy for you to get started with GitLab, here's a list of recommended next steps.
 
-```sh
-virtualenv venv
-. ./venv/bin/activate
-pip install sphinx-book-theme myst-parser
-```
-Sphinx uses reStructuredtext as default. Using `myst_parser` we can also use Markdown.
+Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
 
-## Cloning the template
+## Add your files
 
-First fork this project using the fork button on the top right. Then clone your project.
-
-# Creating html
-
-```sh
-cd sphinx-book-template
-SPHINXBUILD=~/venv/bin/sphinx-build make html
-```
-
-You can view the output using your browser, e.g.:
-
-```sh
-xdg-open _build/html
-```
-
-# Deployment on World Wide Web (WWW)
-
-## Manually
-
-You can copy the folder `html` on a web server.
-
-If you are using a server which serves the `$HOME/public_html` to the web, then make sure that the web server has access to this folder. In the following example we are using a server called `joan.th-deg.de`:
-
-```sh
-ssh joan.th-deg.de
-mkdir public_html  # This folder will be shared
-```
-
-We have to give other users (your group & others) the permission to public_html by giving listing access to your home folder. But other users could now could read the files by guessing their filename, so  we have to remove the read permission and execute/enter-directory permission for other users:
-
-```sh
-chmod go-rx --recursive ~  # Remove rx from other users from all files/folders
-chmod go+x ~  # Add (listing the files is forbidden, because `r` is missing)
- 
-# and with the exception of public_html
-chmod go+rx public_html
-```
-
-If you already have other files and folders in `public_html`, then make them readable by other users:
-
-```sh
-# Give others the permission to read all the files
-find ~/public_html -type f -exec chmod go+r {} +
-# Give others the permission to enter and list the directories
-find ~/public_html -type d -exec chmod go+rx {} +
-```
-
-## Automatic
-
-This template includes a continuous integration and deployment (CI/CD) configuration (`.gitlab-ci.yml`) for Gitlab which copies the html files to a server whenever you push a new commit. To use it, you need to have an SSH access to a web server.
-
-Three steps:
-
-1. Setting up the values for the variables in `.gitlab-ci.yml` (explained later)
-1. Modifying `.gitlab-ci.yml` according to your username and the deployment folder on the web server
-1. Activating a runner in `Settings - CI/CD - Runners`. A shared runner may be available. 
-1. Check the status of the runner on the main page of your repository. If successful, you should see the result on the web address, e.g., https://joan.th-deg.de/~gaydos/sphinx-book-template
-
-After about a few minutes the runner should pick up your job and execute your pipeline.
-
-The explanation for the first step follows:
-
-### Setting up the values for the variables in `.gitlab-ci.yml`
-
-First store your SSH private key (`$SSH_PRIVATE_KEY`) and the SSH public key of the SSH server (`$SSH_KNOWN_HOSTS`) in the CI/CD variables. You find a tutorial here: [Add a CI/CD variable to a project](https://docs.gitlab.com/ee/ci/variables/#add-a-cicd-variable-to-a-project). You do not have to activate `Protected` nor `Masked`.
-
-#### What do I store in `SSH_PRIVATE_KEY`?
-
-You find your private key in `$HOME/.ssh`. You can create new keys using `ssh-keygen`. The public keys have the extension `*.pub`. The extensionless files contain your private keys, e.g., `$HOME/.ssh/id_rsa`:
+- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
+- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
 
 ```
------BEGIN OPENSSH PRIVATE KEY-----
-b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn
-NhAAAAAwEAAQAAAYEAlLAHB1jr+muOFMbAtJWcPQJZOJtiAdtSNauyYU9i5/geckOuKHP9
-...
-K4oavZecZ5XW8AAAASYXJjaEBheWRvcy1yb3MtbWwyAQ==
------END OPENSSH PRIVATE KEY-----
+cd existing_repo
+git remote add origin https://mygit.th-deg.de/peihsun/vending_machine.git
+git branch -M main
+git push -uf origin main
 ```
 
-#### What do I store in `SSH_KNOWN_HOSTS`?
+## Integrate with your tools
 
-This is the key that you accept when you first connect to an SSH server. You can find the public keys of the SSH servers that you have connected to under `$HOME/.ssh/known_hosts`. Alternatively use `ssh-keyscan SERVER_ADDRESS`.
+- [ ] [Set up project integrations](https://mygit.th-deg.de/peihsun/vending_machine/-/settings/integrations)
 
-For example a SSH public key of `joan.th-deg.de` is:
+## Collaborate with your team
 
-```
-joan.th-deg.de ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPYxtnUvjyLdIDkzs4GEzv6KnSN88uPQCC3H/IcuEToe
-```
+- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
+- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
+- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
+- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
+- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
 
-#### Giving access to an SSH key
+## Test and Deploy
 
-Finally we have to give an SSH key access to our account. To give access append the public key to `$HOME/.ssh/authorized_keys` on the web server. For example:
+Use the built-in continuous integration in GitLab.
 
-```
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOBL7HM8eE9jmBm5Yz/sJeStc3mGAJp5R8EvVJ4zb9T9 gaydos@joan
-```
+- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
+- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
+- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
+- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
+- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
 
+***
 
-# Further docs
+# Editing this README
 
-- [Sphinx-book theme – Get Started](https://sphinx-book-theme.readthedocs.io)
-- What is this template capable of?
-  - [Sphinx-book theme – Paragraph level markup](https://sphinx-book-theme.readthedocs.io/en/stable/reference/kitchen-sink/paragraph-markup.html)
-  - [Gallery of books based on this library](https://executablebooks.org/en/latest/gallery.html)
+When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
 
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+## Suggestions for a good README
+Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+
+## Name
+Choose a self-explaining name for your project.
+
+## Description
+Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+
+## Badges
+On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+
+## Visuals
+Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+
+## Installation
+Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+
+## Usage
+Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+
+## Support
+Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+
+## Roadmap
+If you have ideas for releases in the future, it is a good idea to list them in the README.
+
+## Contributing
+State if you are open to contributions and what your requirements are for accepting them.
+
+For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+
+You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+
+## Authors and acknowledgment
+Show your appreciation to those who have contributed to the project.
+
+## License
+For open source projects, say how it is licensed.
+
+## Project status
+If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
