@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Relevant concepts &#8212; Vending Machine  documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <link rel="shortcut icon" href="_static/VM_logo.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Approach" href="ch3-approach.html" />
+    <link rel="prev" title="The problem" href="ch1-problem.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/VM_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Vending Machine  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch1-problem.html">
+   The problem
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Relevant concepts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch3-approach.html">
+   Approach
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch4-results.html">
+   Results
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown_examples.html">
+   Markdown examples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spellcheck.html">
+   Spellcheck
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="editing_video.html">
+   Editing and embedding a video
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/ch2-relevant-concepts.md.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-a-intelligent-vending-machine">
+   What is a “Intelligent Vending Machine” ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-features">
+   Basic Features
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-implemented-a-vending-machine-circuit">
+   How to implemented a vending machine circuit?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-hdmi">
+   What is HDMI?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#principle-of-hdmi">
+   Principle of HDMI
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Relevant concepts</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-a-intelligent-vending-machine">
+   What is a “Intelligent Vending Machine” ?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-features">
+   Basic Features
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-implemented-a-vending-machine-circuit">
+   How to implemented a vending machine circuit?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-hdmi">
+   What is HDMI?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#principle-of-hdmi">
+   Principle of HDMI
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="relevant-concepts">
+<h1>Relevant concepts<a class="headerlink" href="#relevant-concepts" title="Permalink to this headline">#</a></h1>
+<section id="what-is-a-intelligent-vending-machine">
+<h2>What is a “Intelligent Vending Machine” ?<a class="headerlink" href="#what-is-a-intelligent-vending-machine" title="Permalink to this headline">#</a></h2>
+<p>It is a new generation of vending machines and belongs to one of the <strong>IOT (Internet of thing)</strong>. The Intelligent vending machine is based on the improvement of the traditional vending machine, adding a variety of new technological elements such as cloud, electronic payment, face recognition, vein authentication and other technologies.</p>
+<p>At present, intelligent vending machines have begun to be equipped with network communication and touch screens with the promotion of smart city policies, and the vigorous development of the <strong>O2O(online To offline)</strong> transaction model.</p>
+<!-- ![Trend chart](https://www.grandviewresearch.com/static/img/research/us-intelligent-vending-machines-market.png)Figure 2.1  -->
+<img alt="Trend chart vending machine" src="https://www.grandviewresearch.com/static/img/research/us-intelligent-vending-machines-market.png" width="540" height="360"/>
+<p>Figure 2.1 shows that the global intelligent vending machines market size is expected to expand at a compound annual growth rate (CAGR) of 13.3% from 2022 to 2030.</p>
+<p>It have penetrated into office buildings, schools, communities and other urban residents ‘gathering places to meet consumers demand’ shopping anytime, anywhere.</p>
+</section>
+<section id="basic-features">
+<h2>Basic Features<a class="headerlink" href="#basic-features" title="Permalink to this headline">#</a></h2>
+<p>Figure 2.2</p>
+<!-- ![Smart vending machine](https://www.limitlessmobil.com/wp-content/uploads/2020/04/Defining-Features-of-a-Smart-vending-machine.jpg) -->
+<img alt="Smart vending machine" src="https://www.limitlessmobil.com/wp-content/uploads/2020/04/Defining-Features-of-a-Smart-vending-machine.jpg" width="540" height="300"/>
+<ul class="simple">
+<li><p>Unmanned store</p></li>
+<li><p>24/7</p></li>
+<li><p>Contactless</p></li>
+<li><p>Inventory management</p></li>
+<li><p>Low cost</p></li>
+</ul>
+</section>
+<section id="how-to-implemented-a-vending-machine-circuit">
+<h2>How to implemented a vending machine circuit?<a class="headerlink" href="#how-to-implemented-a-vending-machine-circuit" title="Permalink to this headline">#</a></h2>
+<p>The system consists of an <strong>FPGA development platform</strong>, and a <strong>screen</strong>.
+The main system uses clk and input to select the product and pay, and then transmit the signal to HDMI to convert the image displayed on the screen. This project is to implement a vending machine with <strong>verilog</strong>.</p>
+<p>Figure 2.3 shows a system architecture.</p>
+<ol class="arabic simple">
+<li><p>State Machine</p></li>
+<li><p>Operational Unit</p></li>
+<li><p>BCD/LED Interface</p></li>
+<li><p>HDMI Interface</p></li>
+</ol>
+<!-- ![system architecture ](./_image/system.png) -->
+<img alt="system" src="_images/system.png" width="540" height="300"/>
+</section>
+<section id="what-is-hdmi">
+<h2>What is HDMI?<a class="headerlink" href="#what-is-hdmi" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/HDMI">HDMI(High Definition Multimedia Interface)</a> is a fully digital video and audio transmission interface that can transmit uncompressed audio and video signals. HDMI can be used for equipment such as set-top boxes, DVD players, personal computers, video game instruments, integrated amplifiers, digital audio and TV sets.</p>
+<p>HDMI can transmit audio and video signals at the same time. Since the audio and video signals use the same wire, it greatly simplifies the installation difficulty of the system circuit.</p>
+</section>
+<section id="principle-of-hdmi">
+<h2>Principle of HDMI<a class="headerlink" href="#principle-of-hdmi" title="Permalink to this headline">#</a></h2>
+<p>The transmission principle of HDMI is the same as that of DVI, and the TMDS (Time Minimized Differential Signal) minimized transmission differential signal transmission technology invented by Silicon Image Company.</p>
+<p><a class="reference external" href="https://www.fpga4fun.com/HDMI.html">TMDS</a> is a differential signal mechanism that uses the voltage difference between two  pins to transmit signals. The value of the transmitted data (“0” or “1”) is determined by the positive and negative polarity and magnitude of the voltage between the two pins.</p>
+<blockquote>
+<div><p>That is, two lines are used to transmit the signal, one line transmits the original signal, and the other line transmits the signal opposite to the original signal. In this way,</p>
+</div></blockquote>
+<p>The receiving end can shield electromagnetic interference by subtracting the signal on one line from the signal on the other line, so as to obtain the correct signal.</p>
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="ch1-problem.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">The problem</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="ch3-approach.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Approach</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Pei-Hsun Lee<br/>
+  
+      &copy; Copyright Creative Commons Attribution 4.0 International License.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
