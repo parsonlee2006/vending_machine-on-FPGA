@@ -39,8 +39,8 @@ deploy-webpages:
     - echo "$SSH_KNOWN_HOSTS" >> ~/.ssh/known_hosts
     - chmod 644 ~/.ssh/known_hosts
   script:
-  - ssh pl27265@joan.th-deg.de -- rm -rf public_html/$CI_PROJECT_NAME
-  - scp -r _build/html  pl27265@joan.th-deg.de:public_html/$CI_PROJECT_NAME
+  - ssh pl27265@joan.th-deg.de -- rm -rf public_html/vending_machine
+  - scp -r _build/html pl27265@joan.th-deg.de:public_html/vending_machine
   except:
     - merge_requests
 
