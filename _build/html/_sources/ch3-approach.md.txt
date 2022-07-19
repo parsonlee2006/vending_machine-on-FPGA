@@ -1,5 +1,7 @@
 # Approach
 
+[Source Code](https://mygit.th-deg.de/peihsun/vending_machine/-/tree/main/_source%20code)
+
 ## Vending machine 1 - Control Unit
 
 The control system is the most important part of this topic. The main system is responsible for the selection of goods and the decision-making of operations. It also includes an HDMI video generator, which can encode and output the part to be displayed, and then decode it. Then there is the part of the interface that can be seen on the screen.

@@ -21,6 +21,7 @@ Figure 4.1 & 4.2 shows the functions on FPGA borad include:
 <!-- ![Result](./_image/result.png) -->
 <img src="_images/result2.png" alt="Result" width="480" height="360">
 <img src="_images/result1.png" alt="Result" width="700" height="360">
+<img src="_images/result3.png" alt="Result" width="440" height="400">
 
 ## Demo Video 
 <video width="540" height="400" controls>
