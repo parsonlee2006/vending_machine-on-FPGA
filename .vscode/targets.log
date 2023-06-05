@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Mon Jul 18 16:38:38 2022
+# Make data base, printed on Mon Sep 12 10:42:13 2022
 
 # Variables
 
@@ -26,7 +26,7 @@ CURDIR := /Users/pei-hsunlee/Downloads/vending_machine
 # makefile
 SHELL = /bin/sh
 # environment
-VSCODE_NLS_CONFIG = {"locale":"zh-tw","availableLanguages":{"*":"zh-tw"},"_languagePackId":"a0b772d00248b7f5c117cab9736199be.zh-tw","_translationsConfigFile":"/Users/pei-hsunlee/Library/Application Support/Code/clp/a0b772d00248b7f5c117cab9736199be.zh-tw/tcf.json","_cacheRoot":"/Users/pei-hsunlee/Library/Application Support/Code/clp/a0b772d00248b7f5c117cab9736199be.zh-tw","_resolvedLanguagePackCoreLocation":"/Users/pei-hsunlee/Library/Application Support/Code/clp/a0b772d00248b7f5c117cab9736199be.zh-tw/b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a","_corruptedFile":"/Users/pei-hsunlee/Library/Application Support/Code/clp/a0b772d00248b7f5c117cab9736199be.zh-tw/corrupted.info","_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"zh-tw","availableLanguages":{"*":"zh-tw"},"_languagePackId":"254afc097fc5987ec225be4b7d46668a.zh-tw","_translationsConfigFile":"/Users/pei-hsunlee/Library/Application Support/Code/clp/254afc097fc5987ec225be4b7d46668a.zh-tw/tcf.json","_cacheRoot":"/Users/pei-hsunlee/Library/Application Support/Code/clp/254afc097fc5987ec225be4b7d46668a.zh-tw","_resolvedLanguagePackCoreLocation":"/Users/pei-hsunlee/Library/Application Support/Code/clp/254afc097fc5987ec225be4b7d46668a.zh-tw/784b0177c56c607789f9638da7b6bf3230d47a8c","_corruptedFile":"/Users/pei-hsunlee/Library/Application Support/Code/clp/254afc097fc5987ec225be4b7d46668a.zh-tw/corrupted.info","_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
 # makefile (from `Makefile', line 1)
@@ -40,13 +40,11 @@ VSCODE_CWD = /
 # environment
 PATH = /Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin
 # environment
-LaunchInstanceID = 0FFB7230-7171-4B45-BFD3-0654FF68EE95
-# environment
 ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.YvEnsx5KX2/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.YRfpyZJTFX/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -60,7 +58,7 @@ HOME = /Users/pei-hsunlee
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/pei-hsunlee/Library/Application Support/Code/CachedData/b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a
+VSCODE_CODE_CACHE_PATH = /Users/pei-hsunlee/Library/Application Support/Code/CachedData/784b0177c56c607789f9638da7b6bf3230d47a8c
 # environment
 LOGNAME = pei-hsunlee
 # environment
@@ -96,7 +94,7 @@ TMPDIR = /var/folders/x4/zqwy08_x5j73zw6php46qrvm0000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/pei-hsunlee/Library/Application Support/Code/1.69.1-main.sock
+VSCODE_IPC_HOOK = /Users/pei-hsunlee/Library/Application Support/Code/1.71.0-main.sock
 # environment
 MallocNanoZone = 0
 # makefile
@@ -106,7 +104,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.37434907.37434913
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.40127541.40127547
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # makefile (from `Makefile', line 7)
@@ -123,8 +121,6 @@ MAKEFILES :=
 <F = $(notdir $<)
 # environment
 LC_ALL = C
-# environment
-SECURITYSESSIONID = 187ae
 # automatic
 ^F = $(notdir $^)
 # default
@@ -138,11 +134,9 @@ LANG = C
 # makefile (from `Makefile', line 8)
 SOURCEDIR = .
 # environment
-VSCODE_PID = 32718
-# environment
-USE_DEBUGPY = False
+VSCODE_PID = 1777
 # variable set hash-table stats:
-# Load=65/1024=6%, Rehash=0, Collisions=1/98=1%
+# Load=62/1024=6%, Rehash=0, Collisions=1/95=1%
 
 # Pattern-specific Variable Values
 
@@ -150,7 +144,7 @@ USE_DEBUGPY = False
 
 # Directories
 
-# . (device 16777225, inode 37781724): 25 files, no impossibilities.
+# . (device 16777223, inode 37781724): 25 files, no impossibilities.
 
 # 25 files, no impossibilities in 1 directories.
 
@@ -240,6 +234,6 @@ help:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Mon Jul 18 16:38:38 2022
+# Finished Make data base on Mon Sep 12 10:42:13 2022
 
  
