@@ -1,6 +1,6 @@
 # vending_machine
 
-https://joan.th-deg.de/~pl27265/vending_machine/
+Proposal Links:https://joan.th-deg.de/~pl27265/vending_machine/
 
 ## Getting started
 
